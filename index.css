@@ -1,0 +1,154 @@
+:root {
+  /* COLOR */
+  --color-header: #191919;
+  --color-header-a: #7e5e17;
+
+  /*TYPO */
+  --font-base: "Merriweather";
+  --font-header: "Josefin Sans", sans-serif;
+}
+
+/* CSS BASICS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-base);
+}
+
+/* IMG */
+img {
+  width: 30px;
+  background-color: var(--color-header-a);
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--color-header);
+  color: var(--color-header-a);
+  font-family: var(--font-header);
+}
+
+/*SUB HEADER */
+
+.sub-header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-header > .burger {
+  margin: 10px;
+}
+.sub-header img {
+  margin: 10px;
+}
+
+/*BURGER MOBILE */
+.burger {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bar {
+  width: 30px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--color-header-a);
+}
+/* language Header */
+
+.language ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  list-style-type: none;
+  margin: 10px;
+}
+.language ul li {
+  padding: 8px 6px;
+
+  border-radius: 50% 50%;
+  background-color: #2d2d2d;
+  color: #626262;
+  font-weight: bold;
+}
+
+/* Direction header */
+
+.Restau-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.Restau-name img {
+  width: 200px;
+  height: 150px;
+}
+.Restau-name h2 {
+  text-align: center;
+  color: #684913;
+  font-style: italic;
+  font-size: 15px;
+}
+
+/* Burger au clic */
+.Nav-Burger {
+  display: none;
+}
+.burger.active .bar:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 13px;
+}
+.burger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.burger.active .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -10px;
+}
+/* Menu nav au click */
+.Nav-Burger.active {
+  border: 1px solid yellow;
+  display: flex;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  justify-content: center;
+  padding: 30px 10px;
+  font-size: 20px;
+  background-color: var(--color-header);
+  margin: 0;
+}
+.Restau-name.active {
+  display: none;
+}
+.middle-nav {
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+  .Nav-Burger {
+    display: flex;
+  }
+}
