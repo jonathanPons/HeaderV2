@@ -122,7 +122,6 @@ img {
 }
 /* Menu nav au click */
 .Nav-Burger.active {
-  border: 1px solid yellow;
   display: flex;
   position: absolute;
   top: 100%;
@@ -149,6 +148,29 @@ img {
     display: none;
   }
   .Nav-Burger {
+    position: absolute;
     display: flex;
+    top: 200%;
+  }
+  .sub-header {
+    position: relative;
+  }
+  .middle-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid blue;
+  }
+  .left-part ul {
+    display: flex;
+    justify-content: space-around;
+
+    gap: 20px;
+  }
+  .right-part ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    border: 1px solid yellow;
   }
 }
